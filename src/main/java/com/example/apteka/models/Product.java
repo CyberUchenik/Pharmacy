@@ -10,7 +10,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {//asdgjasdjg
+public class Product {
+    //asdgjasdjg
+    //adsgfjalsdfhi;ajdfkha
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
