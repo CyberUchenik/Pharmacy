@@ -31,11 +31,28 @@ public class ProductController {
         return "product-info";
     }
 
+
+
     @PostMapping("/product/create")
     public String createProduct(@RequestParam("file1") MultipartFile file1,@RequestParam("file2") MultipartFile file2,
                                 @RequestParam("file3") MultipartFile file3,Product product) throws IOException {
         productService.saveProduct(product,file1,file2,file3);
         return "redirect:/";
+    }
+    @PostMapping("/product/update/{id}")
+    public String updateProduct(@PathVariable("id") long id, @RequestParam("name") String name,
+                                @RequestParam("description")String description,@RequestParam("price") int price,
+                                @RequestParam("quantity") int quantity,@RequestParam("file1") MultipartFile file1,
+                                @RequestParam("file2") MultipartFile file2, @RequestParam("file3") MultipartFile file3)
+                                throws IOException {
+        Product product = productService.getProductById(id);
+        product.setName(name);
+        product.setDescription(description);
+        product.setPrice(price);
+        product.setQuantity(quantity);
+
+        productService.saveProduct(product,file1,file2,file3);
+        return "redirect:/product/" + id;
     }
     @PostMapping("/product/delete/{id}")
     public String deleteProduct(@PathVariable long id){

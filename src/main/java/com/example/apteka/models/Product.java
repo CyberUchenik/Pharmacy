@@ -15,8 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
-    //asdgjasdjg
-    //adsgfjalsdfhi;ajdfkha
+    //1dcd47c4-cee0-4135-aba9-f514de32b0f2
+    //
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
