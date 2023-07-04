@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26881f80-f0fc-4876-9343-a8b1ea1d399a" name="Changes" comment="Добавлено возможность прикреплять фотографий к продукту. Создана отдельная таблица в базе данных &quot;image&quot;">
+    <list default="true" id="26881f80-f0fc-4876-9343-a8b1ea1d399a" name="Changes" comment="Добавлена функция изменения товаров.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/repositories/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/product-info.ftlh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +100,7 @@
       <workItem from="1688316643782" duration="2492000" />
       <workItem from="1688379323139" duration="7585000" />
       <workItem from="1688401094548" duration="3890000" />
-      <workItem from="1688470987154" duration="6718000" />
+      <workItem from="1688470987154" duration="17570000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;">
       <option name="closed" value="true" />
@@ -115,7 +118,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688407998510</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавлена функция изменения товаров.">
+      <option name="closed" value="true" />
+      <created>1688479027520</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688479027520</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,7 +146,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;" />
     <MESSAGE value="Добавлено возможность прикреплять фотографий к продукту. Создана отдельная таблица в базе данных &quot;image&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено возможность прикреплять фотографий к продукту. Создана отдельная таблица в базе данных &quot;image&quot;" />
+    <MESSAGE value="Добавлена функция изменения товаров." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена функция изменения товаров." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -143,6 +155,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.sql.SQLException" package="java.sql" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

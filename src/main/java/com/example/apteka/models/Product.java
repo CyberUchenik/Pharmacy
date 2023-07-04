@@ -50,4 +50,8 @@ public class Product {
         images.add(image);
     }
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "product")
+    private List<Sale> sales = new ArrayList<>();
+
+
 }

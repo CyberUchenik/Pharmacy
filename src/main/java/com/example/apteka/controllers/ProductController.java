@@ -28,11 +28,9 @@ public class ProductController {
         Product product = productService.getProductById(id);
         model.addAttribute("product",productService.getProductById(id));
         model.addAttribute("images",product.getImages());
+        model.addAttribute("totalPrice", 0);
         return "product-info";
     }
-
-
-
     @PostMapping("/product/create")
     public String createProduct(@RequestParam("file1") MultipartFile file1,@RequestParam("file2") MultipartFile file2,
                                 @RequestParam("file3") MultipartFile file3,Product product) throws IOException {
@@ -52,6 +50,21 @@ public class ProductController {
         product.setQuantity(quantity);
 
         productService.saveProduct(product,file1,file2,file3);
+        return "redirect:/product/" + id;
+    }
+    @PostMapping("/product/sell/{id}")
+    public String sellProduct(@PathVariable("id") long id,@RequestParam("quantity") int quantity,Model model){
+        Product product = productService.getProductById(id);
+
+        //Получаем цену товара по айди
+        int price = product.getPrice();
+
+        // Обновляем количество товара и общую стоимость в модели
+        model.addAttribute("product", product);
+
+        //Вызываем метод из Сервиса productService
+        productService.sellProduct(id,quantity,price);
+
         return "redirect:/product/" + id;
     }
     @PostMapping("/product/delete/{id}")

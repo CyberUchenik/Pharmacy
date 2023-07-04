@@ -8,12 +8,15 @@
 <h4>Подробная информация о товаре</h4>
 <#list images as img>
     <img src="/images/${img.id}" height="60px"/><br><br>
-
 </#list>
 <b>Название товара: </b>${product.name}<br>
 <b>Описание товара: </b>${product.description}<br>
 <b>Цена товара: </b>${product.price}<br>
 <b>Количество товара: </b>${product.quantity}<br>
+<form action="/product/sell/${product.id}" method="post">
+    <b>Количество: </b><input type="number" name="quantity"><br><br>
+    <input type="submit" value="Купить">
+</form>
 <hr>
 <form action="/product/update/${product.id}" method="post" enctype="multipart/form-data">
     <label for="name">Название товара:</label>
@@ -36,8 +39,6 @@
 
     <label for="file3">Фотография 2:</label>
     <input type="file" id="file3" name = "file3"><br><br>
-
-
     <input type="submit" value="Изменить товар">
 </form>
 <form action = " /product/delete/${product.id}" method="post">
