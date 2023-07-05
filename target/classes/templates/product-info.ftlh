@@ -37,7 +37,7 @@
     <label for="file2">Фотография 2:</label>
     <input type="file" id="file2" name="file2"><br><br>
 
-    <label for="file3">Фотография 2:</label>
+    <label for="file3">Фотография 3:</label>
     <input type="file" id="file3" name = "file3"><br><br>
     <input type="submit" value="Изменить товар">
 </form>
