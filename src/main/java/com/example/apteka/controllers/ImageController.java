@@ -26,6 +26,5 @@ public class ImageController {
                 .contentLength(image.getSize())
                 .body(new InputStreamResource(new ByteArrayInputStream(image.getBytes())));
 
-
     }
 }

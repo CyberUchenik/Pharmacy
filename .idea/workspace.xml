@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26881f80-f0fc-4876-9343-a8b1ea1d399a" name="Changes" comment="Добавлена функция для продажи товаров. Которая уменьшает количество товара на складе.">
+    <list default="true" id="26881f80-f0fc-4876-9343-a8b1ea1d399a" name="Changes" comment="Исправлены баги касательно создания продукта и увеличен размер файла для Images(Application properties)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/models/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/models/Product.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/services/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/products.ftlh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,30 +57,38 @@
       </MavenGeneralSettings>
     </option>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2RsEFEHQDLNH0ZEEKhfLIHhfaNX" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/OneDrive/Рабочий стол/ /apteka&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;809ab2a76bcce65587cb5d52c49a1cba&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Asus/OneDrive/Рабочий стол/ /apteka",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "spring.configuration.checksum": "809ab2a76bcce65587cb5d52c49a1cba",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="AptekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="apteka" />
@@ -98,7 +113,32 @@
       <workItem from="1688379323139" duration="7585000" />
       <workItem from="1688401094548" duration="3890000" />
       <workItem from="1688470987154" duration="18412000" />
-      <workItem from="1688552757481" duration="2956000" />
+      <workItem from="1688552757481" duration="5439000" />
+      <workItem from="1690197915540" duration="64000" />
+      <workItem from="1690463154823" duration="2368000" />
+      <workItem from="1693910709454" duration="1426000" />
+      <workItem from="1693999608652" duration="15000" />
+      <workItem from="1694598663540" duration="233000" />
+      <workItem from="1694604949492" duration="279000" />
+      <workItem from="1697027091775" duration="627000" />
+      <workItem from="1697039744136" duration="109000" />
+      <workItem from="1697361492243" duration="3309000" />
+      <workItem from="1697465700275" duration="13000" />
+      <workItem from="1697895846658" duration="835000" />
+      <workItem from="1697962659363" duration="4049000" />
+      <workItem from="1697997919085" duration="10000" />
+      <workItem from="1701091948807" duration="627000" />
+      <workItem from="1701504069398" duration="626000" />
+      <workItem from="1701674132386" duration="48000" />
+      <workItem from="1701941357251" duration="1388000" />
+      <workItem from="1702276485433" duration="28000" />
+      <workItem from="1702380398016" duration="2283000" />
+      <workItem from="1703501908415" duration="36000" />
+      <workItem from="1703502245165" duration="1252000" />
+      <workItem from="1703602336925" duration="1223000" />
+      <workItem from="1704017264656" duration="16000" />
+      <workItem from="1704285469167" duration="699000" />
+      <workItem from="1704531110036" duration="5482000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;">
       <option name="closed" value="true" />
@@ -132,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688508098183</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлен модель Sale который хранит в себе данные о продаже и передавать эти данные в базу данных с помощью Hibernate">
+      <option name="closed" value="true" />
+      <created>1688565550246</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1688565550246</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +191,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -154,7 +214,9 @@
     <MESSAGE value="Добавлено возможность прикреплять фотографий к продукту. Создана отдельная таблица в базе данных &quot;image&quot;" />
     <MESSAGE value="Добавлена функция изменения товаров." />
     <MESSAGE value="Добавлена функция для продажи товаров. Которая уменьшает количество товара на складе." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена функция для продажи товаров. Которая уменьшает количество товара на складе." />
+    <MESSAGE value="Добавлен модель Sale который хранит в себе данные о продаже и передавать эти данные в базу данных с помощью Hibernate" />
+    <MESSAGE value="Исправлены баги касательно создания продукта и увеличен размер файла для Images(Application properties)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены баги касательно создания продукта и увеличен размер файла для Images(Application properties)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

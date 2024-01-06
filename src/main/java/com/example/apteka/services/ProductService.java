@@ -27,7 +27,6 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-
     public void saveProduct(Product product, MultipartFile file1, MultipartFile file2, MultipartFile file3) throws IOException {
         Image image1;
         Image image2;
@@ -39,11 +38,11 @@ public class ProductService {
             product.addImageToProduct(image1);
         }
         if (file2.getSize() != 0) {
-            image2 = toImageEntity(file1);
+            image2 = toImageEntity(file2);
             product.addImageToProduct(image2);
         }
         if (file3.getSize() != 0) {
-            image3 = toImageEntity(file1);
+            image3 = toImageEntity(file3);
             product.addImageToProduct(image3);
         }
 
@@ -71,7 +70,6 @@ public class ProductService {
 
                 // Вычесть проданное количество из имеющегося на складе
                 product.setQuantity(product.getQuantity() - quantity);
-
 
                 // Сохранить изменения в товаре
                 productRepository.save(product);

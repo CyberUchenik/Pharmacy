@@ -16,7 +16,6 @@ import java.util.List;
 @NoArgsConstructor
 public class Product {
     //1dcd47c4-cee0-4135-aba9-f514de32b0f2
-    //
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
@@ -30,7 +29,6 @@ public class Product {
 
     @Column(name = "price")
     private int price;
-
     @Column(name = "quantity")
     private int quantity;
 
