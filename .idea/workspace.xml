@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26881f80-f0fc-4876-9343-a8b1ea1d399a" name="Changes" comment="Исправлены баги касательно создания продукта и увеличен размер файла для Images(Application properties)">
+    <list default="true" id="55d26208-c488-45e2-affa-0c1310737286" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/models/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/models/Image.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +41,7 @@
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="e0c43309-b1d6-472a-8580-7a45f7c655ff" />
-        <option name="url" value="https://github.com/CyberUchenik/Apteka.git" />
+        <option name="url" value="https://github.com/CyberUchenik/Pharmacy.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -55,30 +65,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/OneDrive/Рабочий стол/ /apteka&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;809ab2a76bcce65587cb5d52c49a1cba&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "node.js.selected.package.tslint": "(autodetect)"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -140,7 +140,12 @@
       <workItem from="1704017264656" duration="16000" />
       <workItem from="1704285469167" duration="699000" />
       <workItem from="1704531110036" duration="5482000" />
-      <workItem from="1705843792590" duration="1164000" />
+      <workItem from="1705843792590" duration="2534000" />
+      <workItem from="1706020218207" duration="3447000" />
+      <workItem from="1706069674473" duration="24000" />
+      <workItem from="1706523473812" duration="1948000" />
+      <workItem from="1706535283727" duration="2780000" />
+      <workItem from="1706617896429" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;">
       <option name="closed" value="true" />
