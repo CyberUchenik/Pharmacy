@@ -15,7 +15,7 @@ import org.springframework.ui.Model;
 public class UserController {
     private final ProductService productService;
 
-    @GetMapping("/user/products")
+    @GetMapping("/")
     public String userProducts(@RequestParam(name = "name", required = false) String name, Model model) {
         model.addAttribute("products", productService.listProducts(name));
         return "user-products";//TODO создать файл для юзера продуктс
@@ -35,10 +35,13 @@ public class UserController {
         // Получаем цену товара по айди
         int price = product.getPrice();
 
+        // Обновляем количество товара и общую стоимость в модели
+        model.addAttribute("product", product);
+
         // Вызываем метод из Сервиса productService для выполнения операции покупки
         productService.buyProduct(id, quantity, price);
 
-        return "redirect:/user/products";//TODO создать файл для юзера
+        return "redirect:/user/product/" + id;//TODO создать файл для юзера
     }
 
 

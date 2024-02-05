@@ -13,6 +13,10 @@
 <b>Описание товара: </b>${product.description}<br>
 <b>Цена товара: </b>${product.price}<br>
 <b>Количество товара: </b>${product.quantity}<br>
+<form action="/user/product/buy/${product.id}" method="post">
+  <b>Количество: </b><input type="number" name="quantity"><br><br>
+  <input type="submit" value="Купить">
+</form>
 <hr>
 </body>
 </html>

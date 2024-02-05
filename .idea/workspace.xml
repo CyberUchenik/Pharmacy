@@ -7,8 +7,12 @@
     <list default="true" id="55d26208-c488-45e2-affa-0c1310737286" name="Changes" comment="Добавлены зависимости jjwt версии 0.9.1  а также &#10;com.h2database. Заполнены таблицы roles_dic(user -1, admin - 2), users(Kapaev, KapaevAdmin), user_roles(2-1,3-2)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user-product-info.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/user-product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/user-product-info.ftlh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +168,7 @@
       <workItem from="1707037361970" duration="265000" />
       <workItem from="1707037639304" duration="321000" />
       <workItem from="1707049325106" duration="3910000" />
-      <workItem from="1707116968639" duration="12572000" />
+      <workItem from="1707116968639" duration="13843000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;">
       <option name="closed" value="true" />

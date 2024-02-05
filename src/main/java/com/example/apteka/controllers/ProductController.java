@@ -17,7 +17,7 @@ import java.io.IOException;
 public class ProductController {
     private final ProductService productService;
 
-    @GetMapping("/")
+    @GetMapping("/admin/products")
     public String products(@RequestParam(name = "name", required = false) String name, Model model){
         model.addAttribute("products",productService.listProducts(name));
         return "products";
