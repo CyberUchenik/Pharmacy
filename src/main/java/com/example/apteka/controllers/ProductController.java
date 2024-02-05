@@ -29,7 +29,6 @@ public class ProductController {
         model.addAttribute("images",product.getImages());
         model.addAttribute("totalPrice", 0);
         return "product-info";
-
     }
 
     @PostMapping("/product/create")

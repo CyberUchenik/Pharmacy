@@ -1,12 +1,12 @@
 package com.example.apteka.models;
 
+import com.example.apteka.models.additionalModels.Role;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
-import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.antlr.v4.runtime.misc.NotNull;
+
+import java.util.Collection;
 
 /**
  * @author Kapaev Taspolat
@@ -45,5 +45,12 @@ public class User {
     @Column(name = "user_type_id")
     private int user_type_id;
 
+    @ManyToMany
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "role_id")
+    )
+    private Collection<Role> roles;
 
 }
