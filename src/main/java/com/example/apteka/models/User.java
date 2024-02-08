@@ -41,9 +41,9 @@ public class User {
     @Column(name = "def")
     private String def;
 
-    //TODO Надо будет создать сущность(класс) user_types_dic
-    @Column(name = "user_type_id")
-    private int user_type_id;
+//    //TODO Надо будет создать сущность(класс) user_types_dic
+//    @Column(name = "user_type_id")
+//    private int user_type_id;
 
     @ManyToMany
     @JoinTable(
@@ -52,5 +52,6 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private Collection<Role> roles;
+
 
 }

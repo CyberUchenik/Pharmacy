@@ -4,13 +4,13 @@ import com.example.apteka.models.User;
 import com.example.apteka.models.additionalModels.Role;
 import com.example.apteka.repositories.additionalRepositories.RoleRepository;
 import com.example.apteka.repositories.additionalRepositories.UserRepository;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;

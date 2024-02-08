@@ -16,3 +16,4 @@ public class Role {
     @Column(name = "role_def")
     private String roleDef;
 }
+//TODO создать вспомогательный класс только для Permissions
