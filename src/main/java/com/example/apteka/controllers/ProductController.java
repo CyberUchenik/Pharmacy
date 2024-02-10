@@ -17,7 +17,7 @@ import java.io.IOException;
 public class ProductController {
     private final ProductService productService;
 
-    @GetMapping("/")
+    @GetMapping("/admin/products")
     public String products(@RequestParam(name = "name", required = false) String name, Model model){
         model.addAttribute("products",productService.listProducts(name));
         return "products";
@@ -30,6 +30,7 @@ public class ProductController {
         model.addAttribute("totalPrice", 0);
         return "product-info";
     }
+
     @PostMapping("/product/create")
     public String createProduct(@RequestParam("file1") MultipartFile file1,@RequestParam("file2") MultipartFile file2,
                                 @RequestParam("file3") MultipartFile file3,Product product) throws IOException {
@@ -51,7 +52,7 @@ public class ProductController {
         productService.saveProduct(product,file1,file2,file3);
         return "redirect:/product/" + id;
     }
-    @PostMapping("/product/sell/{id}")
+    @PostMapping("/product/buy/{id}")
     public String sellProduct(@PathVariable("id") long id,@RequestParam("quantity") int quantity,Model model){
         Product product = productService.getProductById(id);
 
@@ -62,7 +63,7 @@ public class ProductController {
         model.addAttribute("product", product);
 
         //Вызываем метод из Сервиса productService
-        productService.sellProduct(id,quantity,price);
+        productService.buyProduct(id,quantity,price);
 
         return "redirect:/product/" + id;
     }

@@ -8,7 +8,6 @@ import com.example.apteka.repositories.SaleRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -62,7 +61,7 @@ public class ProductService {
         return image;
     }
 
-    public void sellProduct(Long productId, int quantity, int price){
+    public void buyProduct(Long productId, int quantity, int price){
         Product product = getProductById(productId);
         // Проверить наличие достаточного количества товара на складе
         if(product != null){

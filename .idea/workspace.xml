@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="26881f80-f0fc-4876-9343-a8b1ea1d399a" name="Changes" comment="Исправлены баги касательно создания продукта и увеличен размер файла для Images(Application properties)">
+    <list default="true" id="55d26208-c488-45e2-affa-0c1310737286" name="Changes" comment="Добавлены зависимости jjwt версии 0.9.1  а также &#10;com.h2database. Заполнены таблицы roles_dic(user -1, admin - 2), users(Kapaev, KapaevAdmin), user_roles(2-1,3-2)">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/utils/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/utils/JwtTokenUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/configs/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/configs/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/services/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -31,7 +47,7 @@
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
         <option name="accountId" value="e0c43309-b1d6-472a-8580-7a45f7c655ff" />
-        <option name="url" value="https://github.com/CyberUchenik/Apteka.git" />
+        <option name="url" value="https://github.com/CyberUchenik/Pharmacy.git" />
       </UrlAndAccount>
     </option>
   </component>
@@ -57,20 +73,25 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;cf99ce6a-eeec-4150-985e-9fb22d55d616&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
     &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/OneDrive/Рабочий стол/ /apteka&quot;,
+    &quot;import_schema_mapping&quot;: &quot;&lt;schema-mapping&gt;\n  &lt;databases&gt;\n    &lt;list&gt;\n      &lt;schema-mapping-item&gt;\n        &lt;source-data-source-id&gt;cf99ce6a-eeec-4150-985e-9fb22d55d616&lt;/source-data-source-id&gt;\n        &lt;source-path&gt;database/&amp;quot;postgres&amp;quot;&lt;/source-path&gt;\n        &lt;target-data-source-id&gt;cf99ce6a-eeec-4150-985e-9fb22d55d616&lt;/target-data-source-id&gt;\n        &lt;target-path&gt;database/&amp;quot;postgres&amp;quot;/schema/&amp;quot;test&amp;quot;&lt;/target-path&gt;\n      &lt;/schema-mapping-item&gt;\n    &lt;/list&gt;\n  &lt;/databases&gt;\n&lt;/schema-mapping&gt;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Asus/OneDrive/Рабочий стол/ /Pharmacy&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;809ab2a76bcce65587cb5d52c49a1cba&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.21149425&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1ebf02feb88bbeb2bad9d8ece3787348&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -79,6 +100,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -92,7 +118,7 @@
       </method>
     </configuration>
     <configuration name="AptekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="apteka" />
+      <module name="task7" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.apteka.AptekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -102,7 +128,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="26881f80-f0fc-4876-9343-a8b1ea1d399a" name="Changes" comment="" />
+      <changelist id="55d26208-c488-45e2-affa-0c1310737286" name="Changes" comment="" />
       <created>1688030282732</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -140,7 +166,31 @@
       <workItem from="1704017264656" duration="16000" />
       <workItem from="1704285469167" duration="699000" />
       <workItem from="1704531110036" duration="5482000" />
-      <workItem from="1705843792590" duration="1164000" />
+      <workItem from="1705843792590" duration="2534000" />
+      <workItem from="1706020218207" duration="3447000" />
+      <workItem from="1706069674473" duration="24000" />
+      <workItem from="1706523473812" duration="1948000" />
+      <workItem from="1706535283727" duration="2780000" />
+      <workItem from="1706617896429" duration="693000" />
+      <workItem from="1706882296653" duration="6828000" />
+      <workItem from="1706933998239" duration="567000" />
+      <workItem from="1706935146098" duration="87000" />
+      <workItem from="1706971745068" duration="3008000" />
+      <workItem from="1707037361970" duration="265000" />
+      <workItem from="1707037639304" duration="321000" />
+      <workItem from="1707049325106" duration="3910000" />
+      <workItem from="1707116968639" duration="18465000" />
+      <workItem from="1707230193811" duration="3213000" />
+      <workItem from="1707233421871" duration="4581000" />
+      <workItem from="1707238151822" duration="1422000" />
+      <workItem from="1707278468764" duration="38000" />
+      <workItem from="1707314212524" duration="1142000" />
+      <workItem from="1707318643268" duration="3754000" />
+      <workItem from="1707382983925" duration="17514000" />
+      <workItem from="1707411861613" duration="1564000" />
+      <workItem from="1707539728056" duration="1770000" />
+      <workItem from="1707565329639" duration="1910000" />
+      <workItem from="1707567261400" duration="8513000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;">
       <option name="closed" value="true" />
@@ -182,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1688565550246</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавлены зависимости jjwt версии 0.9.1  а также &#10;com.h2database. Заполнены таблицы roles_dic(user -1, admin - 2), users(Kapaev, KapaevAdmin), user_roles(2-1,3-2)">
+      <option name="closed" value="true" />
+      <created>1706884103127</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706884103127</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +276,8 @@
     <MESSAGE value="Добавлена функция для продажи товаров. Которая уменьшает количество товара на складе." />
     <MESSAGE value="Добавлен модель Sale который хранит в себе данные о продаже и передавать эти данные в базу данных с помощью Hibernate" />
     <MESSAGE value="Исправлены баги касательно создания продукта и увеличен размер файла для Images(Application properties)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлены баги касательно создания продукта и увеличен размер файла для Images(Application properties)" />
+    <MESSAGE value="Добавлены зависимости jjwt версии 0.9.1  а также &#10;com.h2database. Заполнены таблицы roles_dic(user -1, admin - 2), users(Kapaev, KapaevAdmin), user_roles(2-1,3-2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены зависимости jjwt версии 0.9.1  а также &#10;com.h2database. Заполнены таблицы roles_dic(user -1, admin - 2), users(Kapaev, KapaevAdmin), user_roles(2-1,3-2)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
