@@ -28,6 +28,9 @@ public class User {
     @Column(name = "lastname")
     private String lastname;
 
+    @Column(name = "fathername")
+    private String fathername;
+
     @Column(name = "login")
     private String login;
     @Column(name = "email",unique = true)
@@ -37,7 +40,7 @@ public class User {
     @Column(name = "is_verified")
     private Boolean is_verified;
     @Column(name = "hashed_password")
-    private String hashed_password;
+    private String password;
     @Column(name = "def")
     private String def;
 
