@@ -15,7 +15,7 @@ import org.springframework.ui.Model;
 public class UserController {
     private final ProductService productService;
 
-    @GetMapping("/")
+    @GetMapping("/user/products")
     public String userProducts(@RequestParam(name = "name", required = false) String name, Model model) {
         model.addAttribute("products", productService.listProducts(name));
         return "user-products";//TODO создать файл для юзера продуктс
