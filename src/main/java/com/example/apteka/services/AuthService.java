@@ -8,6 +8,7 @@ import com.example.apteka.exceptions.AppError;
 import com.example.apteka.models.User;
 import com.example.apteka.utils.JwtTokenUtils;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -18,12 +19,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class AuthService  {
     private final UserService userService;
     private final JwtTokenUtils jwtTokenUtils;
     private final AuthenticationManager authenticationManager;
     public ResponseEntity<?> createAuthToken(@RequestBody JwtRequest authRequest) {
+        log.info("Creating token for user: {}", authRequest.getFirstname());
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(

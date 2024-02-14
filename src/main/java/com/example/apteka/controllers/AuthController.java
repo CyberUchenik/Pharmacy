@@ -6,18 +6,23 @@ import com.example.apteka.services.AuthService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 @RequiredArgsConstructor
 @Slf4j
 public class AuthController {
     private final AuthService authService;
 
-    @PostMapping("/auth")
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login";
+    }
+
+    @PostMapping(value = "/auth",consumes = "application/json")
     public ResponseEntity<?> createAuthToken(@RequestBody JwtRequest authRequest) {
+        log.info("Received login request for user: {}", authRequest.getFirstname());
         return authService.createAuthToken(authRequest);
     }
 
@@ -25,6 +30,5 @@ public class AuthController {
     public ResponseEntity<?> createNewUser(@RequestBody RegistrationUserDto registrationUserDto){
         return authService.createNewUser(registrationUserDto);
         }
-
 
 }
