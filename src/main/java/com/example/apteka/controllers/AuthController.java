@@ -20,7 +20,7 @@ public class AuthController {
         return "login";
     }
 
-    @PostMapping(value = "/auth",consumes = "application/json")
+    @PostMapping(value = "/auth")
     public ResponseEntity<?> createAuthToken(@RequestBody JwtRequest authRequest) {
         log.info("Received login request for user: {}", authRequest.getFirstname());
         return authService.createAuthToken(authRequest);

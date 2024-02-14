@@ -2,6 +2,7 @@ package com.example.apteka.dtos;
 
 import lombok.Data;
 
+//TODO надо написать логику для регистрации
 @Data
 public class RegistrationUserDto {
 

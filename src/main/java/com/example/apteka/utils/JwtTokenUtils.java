@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+//TODO Нужно будет создать сущность который будет ловить все данные хранить в базе данных токены которые указаны на схеме
 @Component
 public class JwtTokenUtils {
     private static final Logger logger = LoggerFactory.getLogger(JwtTokenUtils.class);

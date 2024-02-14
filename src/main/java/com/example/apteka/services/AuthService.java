@@ -28,7 +28,7 @@ public class AuthService  {
     public ResponseEntity<?> createAuthToken(@RequestBody JwtRequest authRequest) {
         log.info("Creating token for user: {}", authRequest.getFirstname());
         try {
-            authenticationManager.authenticate(
+            authenticationManager.authenticate(//TODO он не проверяет пароль и имя
                     new UsernamePasswordAuthenticationToken(
                             authRequest.getFirstname(),
                             authRequest.getPassword()
@@ -36,12 +36,13 @@ public class AuthService  {
             );
         } catch (BadCredentialsException e) {
             return new ResponseEntity<>(
-                    new AppError(HttpStatus.UNAUTHORIZED.value(), "Неправильный логин или пароль "),
+                    new AppError(HttpStatus.UNAUTHORIZED.value(), "Неправильный логин или пароль "),//TODO надо будет чтобы в случае не правильного пароля как то выводился на фронтенде
                     HttpStatus.UNAUTHORIZED
             );
         }
         UserDetails userDetails = userService.loadUserByUsername(authRequest.getFirstname());
         String token = jwtTokenUtils.generateToken(userDetails);
+        log.info("Created token for " + userDetails+ " " + token );//TODO надо будет чтобы в случае не правильного пароля как то выводился на фронтенде
         return ResponseEntity.ok(new JwtResponse(token));
     }
 
