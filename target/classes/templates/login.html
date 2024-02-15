@@ -16,9 +16,13 @@
 
     <button type="button" onclick="login()">Login</button>
 </form>
+<div id="error-message" style="color: red;"></div>
 
 <script>
     function login() {
+        // Очистите предыдущие сообщения об ошибке
+        document.getElementById("error-message").innerText = '';
+
         var name = document.getElementById("name").value;
         var password = document.getElementById("password").value;
 
@@ -35,14 +39,42 @@
             },
             body: JSON.stringify(authRequest)
         })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    // Если ответ сервера не успешен (HTTP статус вне диапазона 200-299)
+                    throw new Error('Аутентификация не удалась');
+                }
+                return response.json();
+            })
             .then(data => {
-                // Обработать ответ от сервера (например, сохранить токен)
-                console.log(data);
+                const token = data.token;
+                const decodedToken = parseJwt(token);
+                const userRole = decodedToken.role;
+
+                // Перенаправить пользователя в зависимости от роли
+                if (userRole === 'user') {
+                    window.location.href = '/user/products';
+                } else if (userRole === 'admin') {
+                    window.location.href = '/admin/products';
+                } else {
+                    console.error('Неизвестная роль пользователя:', userRole);
+                }
             })
             .catch(error => {
-                console.error('Error:', error);
+                document.getElementById("error-message").innerText = 'Аутентификация не удалась. Проверьте свои учетные данные.';
+                console.error('Ошибка аутентификации:', error);
             });
+    }
+
+    // Функция для декодирования JWT токена
+    function parseJwt(token) {
+        const base64Url = token.split('.')[1];
+        const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+        const jsonPayload = decodeURIComponent(atob(base64).split('').map(c => {
+            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(''));
+
+        return JSON.parse(jsonPayload);
     }
 </script>
 </body>
