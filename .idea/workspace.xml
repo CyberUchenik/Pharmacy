@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d26208-c488-45e2-affa-0c1310737286" name="Changes" comment="Добавлены зависимости jjwt версии 0.9.1  а также &#10;com.h2database. Заполнены таблицы roles_dic(user -1, admin - 2), users(Kapaev, KapaevAdmin), user_roles(2-1,3-2)">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/dtos/RegistrationUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/dtos/RegistrationUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/utils/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/utils/JwtTokenUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/AuthController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/controllers/AuthController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/services/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/services/AuthService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,6 +182,7 @@
       <workItem from="1707797450461" duration="2615000" />
       <workItem from="1707891782219" duration="722000" />
       <workItem from="1707919701234" duration="5730000" />
+      <workItem from="1707997167498" duration="491000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;">
       <option name="closed" value="true" />
