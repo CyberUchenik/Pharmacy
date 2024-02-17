@@ -18,7 +18,7 @@ public class UserController {
     @GetMapping("/user/products")
     public String userProducts(@RequestParam(name = "name", required = false) String name, Model model) {
         model.addAttribute("products", productService.listProducts(name));
-        return "user-products";//TODO создать файл для юзера продуктс
+        return "user-products";
     }
 
     @GetMapping("/user/product/{id}")
@@ -26,7 +26,7 @@ public class UserController {
         Product product = productService.getProductById(id);
         model.addAttribute("product", productService.getProductById(id));
         model.addAttribute("images", product.getImages());
-        return "user-product-info"; //TODO создать файл для юзера инфо
+        return "user-product-info";
     }
     @PostMapping("/user/product/buy/{id}")
     public String buyProduct(@PathVariable("id") long id, @RequestParam("quantity") int quantity, Model model) {
@@ -41,7 +41,7 @@ public class UserController {
         // Вызываем метод из Сервиса productService для выполнения операции покупки
         productService.buyProduct(id, quantity, price);
 
-        return "redirect:/user/product/" + id;//TODO создать файл для юзера
+        return "redirect:/user/product/" + id;
     }
 
 

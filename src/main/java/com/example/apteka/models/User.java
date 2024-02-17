@@ -54,7 +54,9 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    private Collection<Role> roles;
 
+    //TODO нужо будет базу данных агрегировать в обратную сторону то есть хранить токен и в users хранить token_id
+
+    private Collection<Role> roles;
 
 }

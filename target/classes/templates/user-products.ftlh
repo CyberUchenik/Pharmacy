@@ -6,7 +6,7 @@
 <body >
 <h1>PHARMASY</h1><hr>
 <h4>Товары со всего Мира</h4>
-<form action="/" method="get">                                                       //TODO надо action поставить везде
+<form action="/user/products" method="get">
     Поиск по названию объявления: <input type="text" name ="name"><br>
     <input type="submit" value="Поиск"/>
 </form>

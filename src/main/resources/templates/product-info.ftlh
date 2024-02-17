@@ -41,7 +41,7 @@
     <input type="file" id="file3" name = "file3"><br><br>
     <input type="submit" value="Изменить товар">
 </form>
-<form action = " /product/delete/${product.id}" method="post">
+<form action = "/product/delete/${product.id}" method="post">
     <input type="submit" value ="Удалить товар"/>
 </form>
 </body>

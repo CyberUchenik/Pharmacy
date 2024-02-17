@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55d26208-c488-45e2-affa-0c1310737286" name="Changes" comment="Добавлены зависимости jjwt версии 0.9.1  а также &#10;com.h2database. Заполнены таблицы roles_dic(user -1, admin - 2), users(Kapaev, KapaevAdmin), user_roles(2-1,3-2)">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf99ce6a-eeec-4150-985e-9fb22d55d616.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/exceptions/AppError.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/exceptions/AppError.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/configs/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/configs/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/apteka/utils/JwtTokenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/apteka/utils/JwtTokenUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/products.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-products.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user-products.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/dtos/RegistrationUserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/dtos/RegistrationUserDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/services/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/services/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/configs/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/configs/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/apteka/services/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/apteka/services/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +81,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "import_schema_mapping": "<schema-mapping>\n  <databases>\n    <list>\n      <schema-mapping-item>\n        <source-data-source-id>cf99ce6a-eeec-4150-985e-9fb22d55d616</source-data-source-id>\n        <source-path>database/&quot;postgres&quot;</source-path>\n        <target-data-source-id>cf99ce6a-eeec-4150-985e-9fb22d55d616</target-data-source-id>\n        <target-path>database/&quot;postgres&quot;/schema/&quot;test&quot;</target-path>\n      </schema-mapping-item>\n    </list>\n  </databases>\n</schema-mapping>",
-    "last_opened_file_path": "C:/Users/Asus/OneDrive/Рабочий стол/ /Pharmacy",
+    "last_opened_file_path": "C:/Users/Asus/OneDrive/Рабочий стол/ /apteka",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -187,6 +194,10 @@
       <workItem from="1707891782219" duration="722000" />
       <workItem from="1707919701234" duration="5730000" />
       <workItem from="1707997167498" duration="491000" />
+      <workItem from="1708100007305" duration="7606000" />
+      <workItem from="1708109742229" duration="183000" />
+      <workItem from="1708145002208" duration="5024000" />
+      <workItem from="1708170131074" duration="2943000" />
     </task>
     <task id="LOCAL-00001" summary="Добавлены ProductController.java и ProductService.java которые представлюят основыные функции приложения &quot;Pharmasy&quot;">
       <option name="closed" value="true" />
