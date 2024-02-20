@@ -43,10 +43,33 @@
                 if (data.error) {
                     document.getElementById('error-message').textContent = data.error;
                 } else {
-                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('token', JSON.stringify(data));
 
+                    // Добавляем токен в заголовки
                     const headers = new Headers();
-                    headers.append('Authorization', 'Bearer ' + data.token);
+
+                    const token = JSON.parse(localStorage.getItem('token'));
+                    headers.append('Authorization', token);
+
+
+                    // Делаем запрос на /user/products с использованием токена в заголовках
+                    fetch('/user/products', {
+                        method: 'GET',
+                        headers: headers
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`Error fetching /user/products. Status: ${response.status}`);
+                            }
+                            return response.json();
+                        })
+                        .then(productsData => {
+                            console.log('Response from /user/products:', productsData);
+                            // Обрабатываем данные о продуктах, например, обновляем интерфейс
+                        })
+                        .catch(error => {
+                            console.error('Error fetching /user/products:', error);
+                        });
                 }
             })
             .catch(error => {
