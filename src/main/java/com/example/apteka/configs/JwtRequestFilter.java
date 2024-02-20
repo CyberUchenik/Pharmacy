@@ -1,5 +1,4 @@
 package com.example.apteka.configs;
-
 import com.example.apteka.utils.JwtTokenUtils;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
@@ -43,8 +42,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             }catch (MalformedJwtException e){
                 log.error("Ошибка при разборе токена: {}", e.getMessage());
                 // Добавьте логирование содержимого токена
-                log.error("Токен содержимое: {}", jwt);
-            }
+
+            }log.error("Токен содержимое: {}", jwt);
         }
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null){
             UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(

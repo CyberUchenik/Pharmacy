@@ -43,13 +43,14 @@
                 if (data.error) {
                     document.getElementById('error-message').textContent = data.error;
                 } else {
-                    localStorage.setItem('token', JSON.stringify(data));
+                    localStorage.setItem('token', data.token);
+                    console.log('this is data.token after setItem: ', data.token)
 
                     // Добавляем токен в заголовки
                     const headers = new Headers();
 
-                    const token = JSON.parse(localStorage.getItem('token'));
-                    headers.append('Authorization', token);
+                    const token = (localStorage.getItem('token'));
+                    headers.append('Authorization', 'Bearer ' + token);
 
 
                     // Делаем запрос на /user/products с использованием токена в заголовках
