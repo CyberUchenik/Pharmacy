@@ -35,6 +35,7 @@ public class AuthService  {
                     )
             );
         } catch (BadCredentialsException e) {
+            log.error("Ошибка аутентификации: Неправильный логин или пароль", e);
             log.info("Неправильный логин или пароль");
             return new ResponseEntity<>(
                     new AppError(HttpStatus.UNAUTHORIZED.value(), "Неправильный логин или пароль"),

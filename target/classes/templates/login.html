@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2>Login</h2>
-<form action ="/auth" method="post" >
+<form id="loginForm" action="/auth" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br>
 
@@ -15,10 +15,45 @@
     <input type="password" id="password" name="password" required><br>
 
     <div id="error-message" style="color: red;"></div>
-    <input type = "submit" value = "login"/>
+    <input type="submit" value="login"/>
 </form>
 
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
+        console.log('Sending request with data:', {
+            firstname: document.getElementById('name').value,
+            password: document.getElementById('password').value
+        });
+
+        fetch('/auth', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                firstname: document.getElementById('name').value,
+                password: document.getElementById('password').value
+            })
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response this is data :', data);
+                if (data.error) {
+                    document.getElementById('error-message').textContent = data.error;
+                } else {
+                    localStorage.setItem('token', data.token);
+
+                    const headers = new Headers();
+                    headers.append('Authorization', 'Bearer ' + data.token);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    });
+
+</script>
 </body>
 </html>
-
