@@ -27,8 +27,11 @@ public class AuthController {
         return authService.createAuthToken(authRequest);
     }
 
+    @GetMapping("/registrationPage")
+    public String showRegistrationPage(){return "registration";}
+
     @PostMapping("/registration")
     public ResponseEntity<?> createNewUser(@RequestBody RegistrationUserDto registrationUserDto){
         return authService.createNewUser(registrationUserDto);
-        }
+    }
 }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+<h2>Registration Form</h2>
+<form id="registrationForm" action="/registration" method="post">
+    <label for="firstname">First Name:</label>
+    <input type="text" id="firstname" name="firstname" required><br>
+
+    <label for="lastname">Last Name:</label>
+    <input type="text" id="lastname" name="lastname" required><br>
+
+    <label for="fathername">Father Name:</label>
+    <input type="text" id="fathername" name="fathername"><br>
+
+    <label for="login">Login:</label>
+    <input type="text" id="login" name="login" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" name="phone"><br>
+
+    <label for="hashed_password">Password:</label>
+    <input type="password" id="hashed_password" name="hashed_password" required><br>
+
+    <label for="confirmHashed_password">Confirm Password:</label>
+    <input type="password" id="confirmHashed_password" name="confirmHashed_password" required><br>
+
+    <input type="submit" value="Register">
+</form>
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var formData = {
+            firstname: document.getElementById('firstname').value,
+            lastname: document.getElementById('lastname').value,
+            fathername: document.getElementById('fathername').value,
+            login: document.getElementById('login').value,
+            email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            hashed_password: document.getElementById('hashed_password').value,
+            confirmHashed_password: document.getElementById('confirmHashed_password').value
+        };
+
+        fetch('/registration', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error));
+    });
+</script>
