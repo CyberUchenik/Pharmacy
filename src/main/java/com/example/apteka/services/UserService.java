@@ -2,10 +2,9 @@ package com.example.apteka.services;
 
 import com.example.apteka.dtos.RegistrationUserDto;
 import com.example.apteka.models.User;
-import com.example.apteka.repositories.additionalRepositories.RoleRepository;
-import com.example.apteka.repositories.additionalRepositories.UserRepository;
+import com.example.apteka.repositories.UserRepository;
+import com.example.apteka.services.additionalServices.RoleService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.annotation.Lazy;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -57,6 +56,11 @@ public class UserService implements UserDetailsService {
 
         user.setRoles(List.of(roleService.getUserRole()));
         return userRepository.save(user);
+    }
+    public Integer getUserIdByUsername(String firstName) {
+        Optional<User> userOptional = userRepository.findByFirstname(firstName);
+        log.info("getUserIdByUsername получилось? ",userOptional.map(User::getId).orElse(null));
+        return userOptional.map(User::getId).orElse(null);
     }
 
 }

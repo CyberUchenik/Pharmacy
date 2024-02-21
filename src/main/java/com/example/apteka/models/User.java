@@ -1,5 +1,6 @@
 package com.example.apteka.models;
 
+import com.example.apteka.models.additionalModels.AuthToken;
 import com.example.apteka.models.additionalModels.Role;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @author Kapaev Taspolat
@@ -44,6 +46,7 @@ public class User {
     @Column(name = "def")
     private String def;
 
+
 //    //TODO Надо будет создать сущность(класс) user_types_dic
 //    @Column(name = "user_type_id")
 //    private int user_type_id;
@@ -54,9 +57,6 @@ public class User {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-
-    //TODO нужо будет базу данных агрегировать в обратную сторону то есть хранить токен и в users хранить token_id
-
     private Collection<Role> roles;
 
 }
