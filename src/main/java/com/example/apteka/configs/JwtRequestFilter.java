@@ -31,7 +31,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         String username = null;
         String jwt = null;
 
-        if(authHeader != null && authHeader.startsWith("Bearer")){
+        if(authHeader != null && authHeader.startsWith("Bearer ")){
             jwt = authHeader.substring(7);
             try {
                 username = jwtTokenUtils.getUsername(jwt);
@@ -43,7 +43,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 log.error("Ошибка при разборе токена: {}", e.getMessage());
                 // Добавьте логирование содержимого токена
 
-            }log.error("Токен содержимое: {}", jwt);
+            }log.info("Токен содержимое: {}", jwt);
         }
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null){
             UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(

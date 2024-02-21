@@ -44,7 +44,7 @@ public class SecurityConfig   {
                 .cors().disable()
                 .authorizeHttpRequests()
                 .requestMatchers("/login","/auth","/registration").permitAll()
-                .requestMatchers("/user/products","/user/product/{id}","/user/product/buy/{id}").hasAnyRole("USER","ADMIN")
+                .requestMatchers("/products","/user/products","/user/product/{id}","/user/product/buy/{id}").hasAnyRole("USER","ADMIN")
                 .requestMatchers("/admin/products","/product/**").hasRole("ADMIN")
                 .and()
                 .formLogin()

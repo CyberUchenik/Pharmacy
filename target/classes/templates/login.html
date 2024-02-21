@@ -53,20 +53,15 @@
                     headers.append('Authorization', 'Bearer ' + token);
 
 
-                    // Делаем запрос на /user/products с использованием токена в заголовках
-                    fetch('/user/products', {
+                    // Делаем запрос на /products с использованием токена в заголовках
+                    fetch('/products', {
                         method: 'GET',
                         headers: headers
                     })
                         .then(response => {
                             if (!response.ok) {
-                                throw new Error(`Error fetching /user/products. Status: ${response.status}`);
+                                throw new Error(`Error fetching /products. Status: ${response.status}`);
                             }
-                            return response.json();
-                        })
-                        .then(productsData => {
-                            console.log('Response from /user/products:', productsData);
-                            // Обрабатываем данные о продуктах, например, обновляем интерфейс
                         })
                         .catch(error => {
                             console.error('Error fetching /user/products:', error);

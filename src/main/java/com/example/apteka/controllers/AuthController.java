@@ -31,5 +31,4 @@ public class AuthController {
     public ResponseEntity<?> createNewUser(@RequestBody RegistrationUserDto registrationUserDto){
         return authService.createNewUser(registrationUserDto);
         }
-
 }

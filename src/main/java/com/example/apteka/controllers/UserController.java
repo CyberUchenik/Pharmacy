@@ -15,6 +15,12 @@ import org.springframework.ui.Model;
 public class UserController {
     private final ProductService productService;
 
+    @GetMapping("/products")
+    public String showUserProducts() {
+        return "user-products";
+    }
+
+
     @GetMapping("/user/products")
     public String userProducts(@RequestParam(name = "name", required = false) String name, Model model) {
         model.addAttribute("products", productService.listProducts(name));
@@ -24,7 +30,7 @@ public class UserController {
     @GetMapping("/user/product/{id}")
     public String userProductInfo(@PathVariable Long id, Model model) {
         Product product = productService.getProductById(id);
-        model.addAttribute("product", productService.getProductById(id));
+        model.addAttribute("product", product);
         model.addAttribute("images", product.getImages());
         return "user-product-info";
     }
