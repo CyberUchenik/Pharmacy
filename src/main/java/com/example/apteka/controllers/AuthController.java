@@ -27,7 +27,7 @@ public class AuthController {
         return authService.createAuthToken(authRequest);
     }
 
-    @GetMapping("/registrationPage")
+    @GetMapping("/registration")
     public String showRegistrationPage(){return "registration";}
 
     @PostMapping("/registration")
