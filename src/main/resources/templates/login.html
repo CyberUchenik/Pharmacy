@@ -63,6 +63,8 @@
                             if (!response.ok) {
                                 throw new Error(`Error fetching /products. Status: ${response.status}`);
                             }
+                            // Перенаправление на страницу /products после успешного входа
+                            // window.location.href = '/products';
                         })
                         .catch(error => {
                             console.error('Error fetching /user/products:', error);
