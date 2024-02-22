@@ -35,7 +35,7 @@ public class ProductController {
     public String createProduct(@RequestParam("file1") MultipartFile file1,@RequestParam("file2") MultipartFile file2,
                                 @RequestParam("file3") MultipartFile file3,Product product) throws IOException {
         productService.saveProduct(product,file1,file2,file3);
-        return "redirect:/";
+        return "redirect:/admin/products";//TODO Его давно нету
     }
     @PostMapping("/product/update/{id}")
     public String updateProduct(@PathVariable("id") long id, @RequestParam("name") String name,
@@ -70,6 +70,6 @@ public class ProductController {
     @PostMapping("/product/delete/{id}")
     public String deleteProduct(@PathVariable long id){
         productService.deleteProduct(id);
-        return "redirect:/";
+        return "redirect:/admin/products";
     }
 }

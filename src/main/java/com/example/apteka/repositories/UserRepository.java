@@ -1,4 +1,4 @@
-package com.example.apteka.repositories.additionalRepositories;
+package com.example.apteka.repositories;
 
 import com.example.apteka.models.User;
 import org.springframework.data.repository.CrudRepository;

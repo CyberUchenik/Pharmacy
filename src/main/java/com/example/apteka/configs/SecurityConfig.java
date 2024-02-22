@@ -43,8 +43,8 @@ public class SecurityConfig   {
                 .csrf().disable() //TODO надо будет потом врубить
                 .cors().disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/login","/auth","/registration").permitAll()
-                .requestMatchers("/user/**").hasAnyRole("USER","ADMIN")
+                .requestMatchers("/login","/auth","/registration","/registrationPage").permitAll()
+                .requestMatchers("/products","/user/products","/user/product/{id}","/user/product/buy/{id}").hasAnyRole("USER","ADMIN")
                 .requestMatchers("/admin/products","/product/**").hasRole("ADMIN")
                 .and()
                 .formLogin()

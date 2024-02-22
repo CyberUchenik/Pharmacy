@@ -3,10 +3,10 @@
 <head>
     <title>PHARMASY</title>
 </head>
-<body >
+<body>
 <h1>PHARMASY</h1><hr>
 <h4>Товары со всего Мира</h4>
-<form action="/" method="get">
+<form action="/user/products" method="get">
     Поиск по названию объявления: <input type="text" name ="name"><br>
     <input type="submit" value="Поиск"/>
 </form>
@@ -16,7 +16,7 @@
 </div>
 <#else>
 <h3>Товаров нет</h3>
-</#list>
+<#list>
 </list>
 <hr>
 </body>

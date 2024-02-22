@@ -1,7 +1,7 @@
 package com.example.apteka.configs;
-
 import com.example.apteka.utils.JwtTokenUtils;
 import io.jsonwebtoken.ExpiredJwtException;
+import io.jsonwebtoken.MalformedJwtException;
 import io.jsonwebtoken.security.SignatureException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -31,7 +31,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         String username = null;
         String jwt = null;
 
-        if(authHeader != null && authHeader.startsWith("Bearer")){
+        if(authHeader != null && authHeader.startsWith("Bearer ")){
             jwt = authHeader.substring(7);
             try {
                 username = jwtTokenUtils.getUsername(jwt);
@@ -39,7 +39,11 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 log.debug("Время жизни токена вышло");
             }catch (SignatureException e){
                 log.debug("Подпись неправильная");
-            }
+            }catch (MalformedJwtException e){
+                log.error("Ошибка при разборе токена: {}", e.getMessage());
+                // Добавьте логирование содержимого токена
+
+            }log.info("Токен содержимое: {}", jwt);
         }
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null){
             UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(

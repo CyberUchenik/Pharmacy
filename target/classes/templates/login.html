@@ -7,43 +7,75 @@
 </head>
 <body>
 <h2>Login</h2>
-<form id="loginForm">
+<form id="loginForm" action="/auth" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br>
 
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required><br>
 
-    <button type="button" onclick="login()">Login</button>
+    <div id="error-message" style="color: red;"></div>
+    <input type="submit" value="login"/>
+    <a href="/registration">Register</a>
 </form>
 
 <script>
-    function login() {
-        var name = document.getElementById("name").value;
-        var password = document.getElementById("password").value;
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-        var authRequest = {
-            firstname: name,
-            password: password
-        };
+        console.log('Sending request with data:', {
+            firstname: document.getElementById('name').value,
+            password: document.getElementById('password').value
+        });
 
-        // Отправить данные на сервер
         fetch('/auth', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(authRequest)
+            body: JSON.stringify({
+                firstname: document.getElementById('name').value,
+                password: document.getElementById('password').value
+            })
         })
             .then(response => response.json())
             .then(data => {
-                // Обработать ответ от сервера (например, сохранить токен)
-                console.log(data);
+                console.log('Response this is data :', data);
+                if (data.error) {
+                    document.getElementById('error-message').textContent = data.error;
+                } else {
+                    localStorage.setItem('token', data.token);
+                    console.log('this is data.token after setItem: ', data.token)
+
+                    // Добавляем токен в заголовки
+                    const headers = new Headers();
+
+                    const token = (localStorage.getItem('token'));
+                    headers.append('Authorization', 'Bearer ' + token);
+
+
+                    // Делаем запрос на /products с использованием токена в заголовках
+                    fetch('/products', {
+                        method: 'GET',
+                        headers: headers
+                    })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`Error fetching /products. Status: ${response.status}`);
+                            }
+                            // Перенаправление на страницу /products после успешного входа
+                            // window.location.href = '/products';
+                        })
+                        .catch(error => {
+                            console.error('Error fetching /user/products:', error);
+                        });
+                }
             })
             .catch(error => {
                 console.error('Error:', error);
             });
-    }
+    });
+//TODO возможно ошибка в том что я неправильно передаю эндпойнты
 </script>
 </body>
 </html>

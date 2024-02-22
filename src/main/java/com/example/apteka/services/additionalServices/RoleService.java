@@ -1,4 +1,4 @@
-package com.example.apteka.services;
+package com.example.apteka.services.additionalServices;
 
 import com.example.apteka.models.User;
 import com.example.apteka.models.additionalModels.Role;
